@@ -171,18 +171,17 @@ char    *ft_strrev(char *str);
 ```
 -
 ```
-Assignment name  : ft_strrev
-Expected files   : ft_strrev.c
-Allowed functions:
---------------------------------------------------------------------------------
+Assignment name	: ft_strspn
+Expected files	: ft_strspn.c
+Allowed functions: None
+---------------------------------------------------------------
 
-Write a function that reverses (in-place) a string.
+Reproduce exactly the behavior of the strspn function 
+(man strspn).
 
-It must return its parameter.
+The function should be prototyped as follows:
 
-Your function must be declared as follows:
-
-char    *ft_strrev(char *str);
+size_t	ft_strspn(const char *s, const char *accept);
 ```
 -
 ```
