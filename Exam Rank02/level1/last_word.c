@@ -11,7 +11,7 @@ int main(int ac, char **av){
             len--;
         while(len > 0 && av[1][len - 1] != ' ' && av[1][len - 1] != '\t')
             len--;
-        while(av[1][len] && len > 0 && av[1][len] != ' ' && av[1][len] != '\t')
+        while(av[1][len] && av[1][len] != ' ' && av[1][len] != '\t')
             write(1, &av[1][len++], 1);
     }
     write(1, "\n", 1);

@@ -153,6 +153,7 @@ Reproduce exactly the behavior of the function strpbrk
 The function should be prototyped as follows:
 
 char	*ft_strpbrk(const char *s1, const char *s2);
+Str2 parametresi ile gösterilen karakter dizisinde yer alan karakterlerden herhangi birinin str1 parametresi ile gösterilen karakter dizisi içinde bulunduğu yerin bellek adresini geri döndürür. Eğer aranan karakterlerden hiç biri bulunamazsa NULL bir işaretçi geri döndürür
 ```
 -
 ```
@@ -182,6 +183,8 @@ Reproduce exactly the behavior of the strspn function
 The function should be prototyped as follows:
 
 size_t	ft_strspn(const char *s, const char *accept);
+strspn() fonksiyonu
+Str1 parametresi ile gösterilen karakter dizisinde sadece str2 parametresi ile gösterilen karakter dizisinde yer alan karakterlerin bulunduğu ilk kısmın uzunluğunu geri döndürür.
 ```
 -
 ```
