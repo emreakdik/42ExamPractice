@@ -11,8 +11,9 @@ file2=../../../../rendu/add_prime_sum/add_prime_sum.c
     ./out2 > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
-        echo "Fail"
-        flag=0
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
+        exit 1
     fi
 
 # 2. test
@@ -23,8 +24,9 @@ file2=../../../../rendu/add_prime_sum/add_prime_sum.c
     ./out2 "5" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
-        echo "Fail"
-        flag=0
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
+        exit 1
     fi
 
 # 3. test
@@ -35,8 +37,9 @@ file2=../../../../rendu/add_prime_sum/add_prime_sum.c
     ./out2 "Too" "Many" "Arguments" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
-        echo "Fail"
-        flag=0
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
+        exit 1
     fi
 
 # 4. test
@@ -47,21 +50,13 @@ file2=../../../../rendu/add_prime_sum/add_prime_sum.c
     ./out2 "7" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
-        echo "Fail"
-        flag=0
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
+        exit 1
     fi
 
 
     rm out1 out2 out1.txt out2.txt
-    echo $flag
-
-
-    if [ $flag -eq 1]; then
-        clear
-        echo "Success"
-    else
-        clear
-        echo "Fail"
-    fi
-
+    clear
+    echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1

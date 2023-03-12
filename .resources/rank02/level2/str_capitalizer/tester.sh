@@ -11,10 +11,9 @@ file2=../../../../rendu/str_capitalizer/str_capitalizer.c
     ./out1 > out1.txt
     ./out2 > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -25,10 +24,9 @@ file2=../../../../rendu/str_capitalizer/str_capitalizer.c
     ./out1 "a FiRSt LiTTlE TESt" > out1.txt
     ./out2 "a FiRSt LiTTlE TESt" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -39,10 +37,9 @@ file2=../../../../rendu/str_capitalizer/str_capitalizer.c
     ./out1 "SecONd teST A LITtle BiT   Moar comPLEX" "   But... This iS not THAT COMPLEX" "     Okay, this is the last 1239809147801 but not    the least    t" > out1.txt
     ./out2 "SecONd teST A LITtle BiT   Moar comPLEX" "   But... This iS not THAT COMPLEX" "     Okay, this is the last 1239809147801 but not    the least    t" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -53,10 +50,9 @@ file2=../../../../rendu/str_capitalizer/str_capitalizer.c
     ./out1 "Okay i thing you got it!!! " > out1.txt
     ./out2 "Okay i thing you got it!!! " > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -67,15 +63,14 @@ file2=../../../../rendu/str_capitalizer/str_capitalizer.c
     ./out1 "10" > out1.txt
     ./out2 "10" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
 
     rm out1 out2 out1.txt out2.txt
     clear
-    echo "Success"
+    echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1

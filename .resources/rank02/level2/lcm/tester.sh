@@ -11,10 +11,9 @@ file2=../../../../rendu/lcm/lcm.c
     ./out1 "1" "2" > out1.txt
     ./out2 "1" "2" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -25,10 +24,9 @@ file2=../../../../rendu/lcm/lcm.c
     ./out1 "3" "8" > out1.txt
     ./out2 "3" "8" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -39,10 +37,9 @@ file2=../../../../rendu/lcm/lcm.c
     ./out1 "-1" "2932" > out1.txt
     ./out2 "-1" "2932" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -53,10 +50,9 @@ file2=../../../../rendu/lcm/lcm.c
     ./out1 "-13" "2932" > out1.txt
     ./out2 "-13" "2932" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -67,15 +63,14 @@ file2=../../../../rendu/lcm/lcm.c
     ./out1 "0" "2932" > out1.txt
     ./out2 "0" "2932" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
 
     rm out1 out2 out1.txt out2.txt
     clear
-    echo "Success"
+    echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1

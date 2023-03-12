@@ -11,10 +11,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 > out1.txt
     ./out2 > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -25,10 +24,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 "See? It's easy to print the same thing" > out1.txt
     ./out2 "See? It's easy to print the same thing" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -39,10 +37,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 " this        time it      will     be    more complex  . " > out1.txt
     ./out2 " this        time it      will     be    more complex  . " > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -53,10 +50,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 "No S*** Sherlock..." "nAw S*** ShErLaWQ..." > out1.txt
     ./out2 "No S*** Sherlock..." "nAw S*** ShErLaWQ..." > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -67,10 +63,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 "comme c'est cocasse" "vous avez entendu, Mathilde ?" > out1.txt
     ./out2 "comme c'est cocasse" "vous avez entendu, Mathilde ?" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -81,10 +76,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 "5" > out1.txt
     ./out2 "5"> out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -95,10 +89,9 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 "Too" "Many" "Arguments" > out1.txt
     ./out2 "Too" "Many" "Arguments" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -109,15 +102,14 @@ file2=../../../../rendu/expand_str/expand_str.c
     ./out1 "7" > out1.txt
     ./out2 "7" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
 
     rm out1 out2 out1.txt out2.txt
     clear
-    echo "Success"
+    echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1

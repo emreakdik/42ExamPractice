@@ -11,10 +11,9 @@ file2=../../../../rendu/paramsum/paramsum.c
     ./out1 > out1.txt
     ./out2 > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -25,10 +24,9 @@ file2=../../../../rendu/paramsum/paramsum.c
     ./out1 "fgex.;" > out1.txt
     ./out2 "fgex.;" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -39,10 +37,9 @@ file2=../../../../rendu/paramsum/paramsum.c
     ./out1 "abc" "2altrb53c.sse" > out1.txt
     ./out2 "abc" "2altrb53c.sse" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -53,10 +50,9 @@ file2=../../../../rendu/paramsum/paramsum.c
     ./out1 "abc" "btarc" > out1.txt
     ./out2 "abc" "btarc" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -67,10 +63,9 @@ file2=../../../../rendu/paramsum/paramsum.c
     ./out1 "fgex.;" "1" "2 " "3" "4" "5" "6" " 7" "8" "9" "10" > out1.txt
     ./out2 "fgex.;" "1" "2 " "3" "4" "5" "6" " 7" "8" "9" "10" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
@@ -81,15 +76,14 @@ file2=../../../../rendu/paramsum/paramsum.c
     ./out1 "mais non!" "mais non!" > out1.txt
     ./out2 "mais non!" "mais non!" > out2.txt
 
-    if diff -q out1.txt out2.txt >/dev/null ; then
-        echo ""
-    else
-        echo "Fail"
+    if ! diff -q out1.txt out2.txt >/dev/null ; then
+        echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        rm out1 out2 out1.txt out2.txt
         exit 1
     fi
 
 
     rm out1 out2 out1.txt out2.txt
     clear
-    echo "Success"
+    echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1

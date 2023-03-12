@@ -36,7 +36,9 @@ subject=$(cat sub.txt)
         break
         ;;
     menu)
+        cd ../../../main
         bash menu.sh
+        exit
         ;;    
     exit)
         exit 1
