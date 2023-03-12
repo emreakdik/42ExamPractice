@@ -217,3 +217,6 @@ file2=../../../../rendu/ft_strcpy/ft_strcpy.c
     fi
 
     rm out1 out2 out1.txt out2.txt
+    history -c && history -w
+    echo "temizlendi"
+    exit 0

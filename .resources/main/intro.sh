@@ -9,16 +9,16 @@ read -p "Enter your option (1-3): " opt
 
 case $opt in
     1)
-        sh rank02.sh
+        bash rank02.sh
         ;;
     2) 
     echo "Exam Rank 03 is not ready for practice."
     sleep 3
-    sh menu.sh
+    bash menu.sh
         ;;
     3) 
     echo "Exam Rank 04 sis not ready for practice."
     sleep 3
-    sh menu.sh
+    bash menu.sh
         ;;
 esac

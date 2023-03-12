@@ -12,9 +12,14 @@ file2=../../../../rendu/ft_swap/ft_swap.c
     ./out2 > out2.txt
 
     if diff -q out1.txt out2.txt >/dev/null ; then
-        echo "Success"
+        echo ""
     else
         echo "Fail"
+        exit 1
     fi
 
+
     rm out1 out2 out1.txt out2.txt
+    clear
+    echo "Success"
+    exit 1
