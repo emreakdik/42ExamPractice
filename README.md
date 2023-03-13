@@ -4,7 +4,8 @@
 
 
 tr : Bu shell sinavlara daha iyi pratik yapmanizi amacliyor. Pratigi daha verimli hale getirmek icin sinavi level level bolerek istediginiz levelde pespese sorular cozmenizi sagliyor. Ayni zamanda "test" komutu ile birlikte yazdiginiz kodu shell sizin icin test ediyor.
-Turkce Talimatlar: 
+
+Turkce Talimatlar: [Turkce Talimatlar](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
 
 en : This shell aims to provide better practice for exams. By dividing the exam into levels, it allows you to solve consecutive questions at your desired level to make your practice more efficient. Additionally, by using the "test" command, the shell tests your code for you.
 
