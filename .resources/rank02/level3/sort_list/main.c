@@ -36,7 +36,6 @@ int	main(void)
 
 	cur = sort_list(a, ascending);
 
-	// cur = a;
 	while (cur)
 	{
 		printf("%d", cur->data);

@@ -24,6 +24,8 @@ case $opt in
         bash help.sh
         ;;
     exit)
+        cd ../../../../
+        rm -rf rendu
         exit 1
         ;;
     *)

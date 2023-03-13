@@ -1,4 +1,3 @@
-
 #include "list.h"
 
 void	swap_values(t_list *a, t_list *b)

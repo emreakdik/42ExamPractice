@@ -51,6 +51,11 @@ case $opt in
         clear
         bash sub_and_test.sh rank02 level3
         ;;
+    exit)
+        cd ../../../../
+        rm -rf rendu
+        exit
+        ;;
     *)
         echo "$(tput setaf 1)Wrong input$(tput sgr0)"
         sleep 1
