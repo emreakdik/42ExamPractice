@@ -1,5 +1,3 @@
-// Passed Moulinette 2019.09.01
-
 #include <stdio.h>
 #include <stdlib.h>
 
