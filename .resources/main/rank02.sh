@@ -8,7 +8,7 @@ cat << rank02
 $(tput setaf 7)
 1. level0
 2. level1
-3. level2 
+3. level2
 4. level3
 $(tput sgr0)
 ==========================
