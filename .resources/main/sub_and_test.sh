@@ -15,37 +15,43 @@ fi
 
 i=0
 cd "../$rank/$level/${qsub[$i]}"
-ls
+num=${#qsub[@]}
 while true; do
-
-cd "../${qsub[$i]}"
-subject=$(cat sub.txt)
-  while true; do
+    cd "../${qsub[$i]}"
+    subject=$(cat sub.txt)
+    if [ $i -eq $(($num-1)) ]; then
     clear
-    echo "$subject"
-    read -rp "/>" input
-    case $input in
-    next)
-        i=$((i+1))
-        break
-        ;;
-    test)
-        clear
-        bash tester.sh
+        echo "$level is over. You are returning to menu..."
         sleep 2
-        break
-        ;;
-    menu)
         cd ../../../main
         bash menu.sh
         exit
-        ;;    
-    exit)
-        cd ../../../../
-        rm -rf rendu
-        exit 1
-        ;;
-    esac
-  done
-
+    fi
+    while true; do
+        clear
+        echo "$subject"
+        read -rp "/>" input
+        case $input in
+            next)
+                i=$((i+1))
+                break
+                ;;
+            test)
+                clear
+                bash tester.sh
+                sleep 2
+                break
+                ;;
+            menu)
+                cd ../../../main
+                bash menu.sh
+                exit
+                ;;    
+            exit)
+                cd ../../../../
+                rm -rf rendu
+                exit 1
+                ;;
+        esac
+    done   
 done
