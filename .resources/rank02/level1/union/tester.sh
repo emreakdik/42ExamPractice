@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ../../../main/colors.sh
 file1=union.c
 file2=../../../../rendu/union/union.c
 
@@ -12,7 +12,11 @@ file2=../../../../rendu/union/union.c
     ./out2 zpadinton "paqefwtdjetyiytjneytjoeyjnejeyj" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -26,7 +30,11 @@ file2=../../../../rendu/union/union.c
     ./out2 ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -39,7 +47,11 @@ file2=../../../../rendu/union/union.c
     ./out2 "rien" "cette phrase ne cache rien" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -52,7 +64,11 @@ file2=../../../../rendu/union/union.c
     ./out2 "rien" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -66,7 +82,11 @@ file2=../../../../rendu/union/union.c
     ./out2 "a" "b" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -79,7 +99,11 @@ file2=../../../../rendu/union/union.c
     ./out2 "  lorem,ipsum  " "oooo" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -92,7 +116,11 @@ file2=../../../../rendu/union/union.c
     ./out2 "this        ...       is sparta, then again, maybe    not" "lol" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi

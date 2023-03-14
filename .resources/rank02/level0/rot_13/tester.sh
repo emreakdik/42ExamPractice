@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ../../../main/colors.sh
 file1=rot_13.c
 file2=../../../../rendu/rot_13/rot_13.c
 
@@ -12,7 +12,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "L'eSPrit nE peUt plUs pRogResSer s'Il staGne et sI peRsIsTent VAnIte et auto-justification." > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -26,7 +30,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "S'enTOuRer dE sECreT eSt uN sIGnE De mAnQuE De coNNaiSSanCe.  " > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -39,7 +47,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "3:21 Ba  tOut  moUn ki Ka di KE m'en Ka fe fot" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -52,7 +64,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "Papache est un sabre" "a" "o" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -66,7 +82,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "zaz" "art" "zul" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -79,7 +99,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "zaz" "r" "u" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -92,7 +116,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "jacob" "a" "b" "c" "e" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -105,7 +133,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "ZoZ eT Dovid oiME le METol." "o" "a" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -118,7 +150,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "wNcOre Un ExEmPle Pas Facilw a Ecrirw " "w" "e" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -131,7 +167,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "AkjhZ zLKIJz , 23y " > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -144,7 +184,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "FOR PONY" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -157,7 +201,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "this        ...       is sparta, then again, maybe    not" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -170,7 +218,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "   " > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -183,7 +235,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "a" "b" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -196,7 +252,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "  lorem,ipsum  " > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -209,7 +269,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 "" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -222,7 +286,11 @@ file2=../../../../rendu/rot_13/rot_13.c
     ./out2 > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "Expected Output: \"$out1\""
+        echo "Your Output: \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi

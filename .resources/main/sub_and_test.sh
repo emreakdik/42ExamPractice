@@ -1,3 +1,5 @@
+source colors.sh
+
 rank=$1
 level=$2
 
@@ -21,7 +23,7 @@ while true; do
     subject=$(cat sub.txt)
     if [ $i -eq $(($num-1)) ]; then
     clear
-        echo "$level is over. You are returning to menu..."
+        echo "These questions at $level are completed. You are being directed to the main menu..."
         sleep 2
         cd ../../../main
         bash menu.sh
@@ -39,7 +41,8 @@ while true; do
             test)
                 clear
                 bash tester.sh
-                sleep 2
+                echo "=============================================="
+                read -rp "${GREEN}${BOLD}Please press enter to continue your practice.${RESET}" enter
                 break
                 ;;
             menu)

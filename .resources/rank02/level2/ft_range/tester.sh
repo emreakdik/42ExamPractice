@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ../../../main/colors.sh
 file1=ft_range.c
 file2=../../../../rendu/ft_range/ft_range.c
 
@@ -12,7 +12,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "1" "3" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -25,7 +29,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "-1" "2" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -38,7 +46,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "0" "0" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -51,7 +63,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "0" "-3" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -64,7 +80,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "1" "2" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -77,7 +97,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "3" "8" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -90,7 +114,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "-1" "2932" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -103,7 +131,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "-13" "2932" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -116,7 +148,11 @@ file2=../../../../rendu/ft_range/ft_range.c
     ./out2 "0" "2932" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi

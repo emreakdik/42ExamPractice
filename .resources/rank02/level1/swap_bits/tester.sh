@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ../../../main/colors.sh
 file1=swap_bits.c
 file2=../../../../rendu/swap_bits/swap_bits.c
 
@@ -12,7 +12,11 @@ file2=../../../../rendu/swap_bits/swap_bits.c
     ./out2 "a" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -26,7 +30,11 @@ file2=../../../../rendu/swap_bits/swap_bits.c
     ./out2 "0" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -40,7 +48,11 @@ file2=../../../../rendu/swap_bits/swap_bits.c
     ./out2 "P" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi

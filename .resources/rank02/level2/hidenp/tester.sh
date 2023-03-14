@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ../../../main/colors.sh
 file1=hidenp.c
 file2=../../../../rendu/hidenp/hidenp.c
 
@@ -12,7 +12,11 @@ file2=../../../../rendu/hidenp/hidenp.c
     ./out2 > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -25,7 +29,11 @@ file2=../../../../rendu/hidenp/hidenp.c
     ./out2 "fgex.;" "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -38,7 +46,11 @@ file2=../../../../rendu/hidenp/hidenp.c
     ./out2 "abc" "2altrb53c.sse" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -51,7 +63,11 @@ file2=../../../../rendu/hidenp/hidenp.c
     ./out2 "abc" "btarc" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -64,7 +80,11 @@ file2=../../../../rendu/hidenp/hidenp.c
     ./out2 "mais non!" "mais non!" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi

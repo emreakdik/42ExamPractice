@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ../../../main/colors.sh
 file1=inter.c
 file2=../../../../rendu/inter/inter.c
 
@@ -12,7 +12,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 "padinton" "paqefwtdjetyiytjneytjoeyjnejeyj" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -25,7 +29,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 "ddf6vewg64f" "gtwthgdwthdwfteewhrtag6h4ffdhsd" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -38,7 +46,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 "rien" "cette phrase ne cache rien" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -51,7 +63,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 "Oupsi" "Oups" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -64,7 +80,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 "Manger pour vivre" "Vivre pour manger" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -77,7 +97,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi
@@ -90,7 +114,11 @@ file2=../../../../rendu/inter/inter.c
     ./out2 "Too" "Many" "Arguments" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
+        out1=$(cat out1.txt)
+        out2=$(cat out2.txt)
         echo "$(tput setaf 1)$(tput bold)FAIL$(tput sgr 0)"
+        echo "${GREEN}Expected Output:${RESET} \"$out1\""
+        echo "${RED}Your Output:${RESET}     \"$out2\""
         rm out1 out2 out1.txt out2.txt
         exit 1
     fi

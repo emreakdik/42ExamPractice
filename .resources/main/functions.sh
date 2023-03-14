@@ -18,5 +18,7 @@ display_animation() {
             sleep $duration
             $(tput sgr0)
         done
+        $(tput sgr0)
     done
+    $(tput sgr0)
 }
