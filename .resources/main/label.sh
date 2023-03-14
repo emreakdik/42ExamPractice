@@ -1,10 +1,8 @@
-cat << Metin
-$(tput setaf 12)
-░░██╗██╗██████╗░
-░██╔╝██║╚════██╗
-██╔╝░██║░░███╔═╝
-███████║██╔══╝░░
-╚════██║███████╗
-░░░░░╚═╝╚══════╝    exampractice by yakdik
-$(tput sgr 0)
-Metin
+source colors.sh
+printf "${BG_BLUE}${WHITE}%s${RESET}\n" "░░██╗██╗██████╗░"
+printf "${BG_BLUE}${WHITE}%s${RESET}\n" "░██╔╝██║╚════██╗"
+printf "${BG_BLUE}${WHITE}%s${RESET}\n" "██╔╝░██║░░███╔═╝"
+printf "${BG_BLUE}${WHITE}%s${RESET}\n" "███████║██╔══╝░░"
+printf "${BG_BLUE}${WHITE}%s${RESET}\n" "╚════██║███████╗"
+printf "${BG_BLUE}${WHITE}%s${RESET}" "░░░░░╚═╝╚══════╝"
+printf "${BOLD}${WHITE}%s${RESET}\n" " Exam Practice"

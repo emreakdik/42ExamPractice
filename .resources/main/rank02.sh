@@ -1,19 +1,18 @@
 #!/bin/bash
-
+source functions.sh
+source colors.sh
 clear
 bash label.sh
+printf "%-50s\n" "=================================================="
 echo "$(tput setaf 2)$(tput bold)Please choose the level you want to practice.$(tput sgr0)"
-cat << rank02
-==========================
-$(tput setaf 7)
-1. level0
-2. level1
-3. level2
-4. level3
-$(tput sgr0)
-==========================
-rank02
-read -p "Enter your option (1-4): " opt
+printf "%-50s\n" "=================================================="
+printf "${YELLOW}${BOLD}%s${RESET}\n" "1. Level0"
+printf "${YELLOW}${BOLD}%s${RESET}\n" "2. Level1"
+printf "${YELLOW}${BOLD}%s${RESET}\n" "3. Level2"
+printf "${YELLOW}${BOLD}%s${RESET}\n" "4. Level3"
+printf "%-50s\n" "=================================================="
+printf "${GREEN}${BOLD}Enter your choice (1-4): ${RESET}"
+read opt
 
 case $opt in
     menu)
@@ -22,8 +21,8 @@ case $opt in
     1)
         mkdir ../../rendu
         clear
-        echo "$(tput setaf 2)$(tput bold)level0 is being prepared...$(tput sgr0)"
-        sleep 1
+        echo "$(tput setaf 2)$(tput bold)level0 is being prepared $(tput sgr0)"
+        display_animation
         clear
         bash sub_and_test.sh rank02 level0
         ;;
@@ -31,7 +30,7 @@ case $opt in
         mkdir ../../rendu
         clear
         echo "$(tput setaf 2)$(tput bold)level1 is being prepared...$(tput sgr0)"
-        sleep 1
+        display_animation
         clear
         bash sub_and_test.sh rank02 level1
         ;;
@@ -39,7 +38,7 @@ case $opt in
         mkdir ../../rendu
         clear
         echo "$(tput setaf 2)$(tput bold)level2 is being prepared...$(tput sgr0)"
-        sleep 1
+        display_animation
         clear
         bash sub_and_test.sh rank02 level2
         ;;
@@ -47,7 +46,7 @@ case $opt in
         mkdir ../../rendu
         clear
         echo "$(tput setaf 2)$(tput bold)level3 is being prepared...$(tput sgr0)"
-        sleep 1
+        display_animation
         clear
         bash sub_and_test.sh rank02 level3
         ;;

@@ -19,6 +19,5 @@ file2=../../../../rendu/ft_list_foreach/ft_list_foreach.c
 
 
     rm out1 out2 out1.txt out2.txt
-    clear
     echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1

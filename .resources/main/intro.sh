@@ -1,22 +1,23 @@
-echo "$(tput setaf 2)$(tput bold)MAIN MENU$(tput sgr0)"
+source colors.sh
 
-cat << intro
-==========================
-$(tput setaf 7)
-1. Exam Rank 02
-2. Exam Rank 03 (in process)
-3. Commands
-$(tput sgr0)
-==========================
-intro
-read -p "Enter your option (1-3): " opt
+clear
+bash label.sh
+printf "%-50s\n" "=================================================="
+printf "${BG_CYAN}${BLACK}%-50s${RESET}\n" "MAIN MENU"
+printf "%-50s\n" "=================================================="
+printf "${YELLOW}${BOLD}%s${RESET}\n" "1. Exam Rank 02"
+printf "${YELLOW}${BOLD}%s${RESET}\n" "2. Exam Rank 03 (in process)"
+printf "${YELLOW}${BOLD}%s${RESET}\n" "3. Commands"
+printf "%-50s\n" "=================================================="
+printf "${GREEN}${BOLD}Enter your choice (1-3): ${RESET}"
+read opt
 
 case $opt in
     1)
         bash rank02.sh
         ;;
     2) 
-        echo "Exam Rank 03 is not ready for practice."
+        echo "Exam Rank 03 is currently in process"
         sleep 2
         bash menu.sh
         ;;
@@ -29,7 +30,7 @@ case $opt in
         exit 1
         ;;
     *)
-        echo "Wrong input"
+        echo "Invalid choice. Please enter a number from 1 to 3."
         sleep 1
         clear
         bash menu.sh

@@ -10,23 +10,22 @@ void ft_putnbr(void *data)
 	printf("%d", *i);
 }
 
+
 int main()
 {
 	t_list *list;
-	t_list *list_ptr;
 	int i;
+	int *data;
 
 	i = 0;
-	list = malloc(sizeof(t_list));
-	list_ptr = list;
+	list = NULL;
 	while (i < 10)
 	{
-		list_ptr->data = &i;
-		list_ptr->next = malloc(sizeof(t_list));
-		list_ptr = list_ptr->next;
+		data = malloc(sizeof(int));
+		*data = i;
+		ft_list_push_front(&list, data);
 		i++;
 	}
-	list_ptr->next = NULL;
 	ft_list_foreach(list, &ft_putnbr);
 	return (0);
 }
