@@ -22,3 +22,4 @@ file2=../../../../rendu/ft_list_size/ft_list_size.c
     clear
     echo "$(tput setaf 2)$(tput bold)SUCCESS$(tput sgr 0)"
     exit 1
+    

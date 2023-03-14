@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "ft_list.h"
+#include <stdlib.h>
 
 void	print_list(t_list **begin_list)
 {

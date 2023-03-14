@@ -1,7 +1,7 @@
 #!/bin/bash
 
-file1=ft_list_remove_if.c
-file2=../../../../rendu/ft_list_remove_if/ft_list_remove_if.c
+file1=sort_int_tab.c
+file2=../../../../rendu/sort_int_tab/sort_int_tab.c
 
 
 # 1. test

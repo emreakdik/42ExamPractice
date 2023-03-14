@@ -6,7 +6,7 @@ if [[ "$level" == *"level0"* ]]; then
 elif [[ "$level" == *"level1"* ]]; then
     qsub=("alpha_mirror" "camel_to_snake" "do_op" "ft_atoi" "ft_strcmp" "ft_strcsnp" "ft_strdup" "inter" "is_power_of_2" "last_word" "max" "snake_to_camel" "swap_bits" "union")
 elif [[ "$level" == *"level2"* ]]; then
-    qsub=("add_prime_sum" "epur_str" "expand_str" "ft_atoi_base" "ft_range" "ft_rrange" "hidenp" "lcm" "paramsum" "pgcd" "print_hex" "rstr_capitalizer" "str_capitalizer" "tab_mult")
+    qsub=("add_prime_sum" "epur_str" "expand_str" "ft_list_size" "ft_atoi_base" "ft_range" "ft_rrange" "hidenp" "lcm" "paramsum" "pgcd" "print_hex" "rstr_capitalizer" "str_capitalizer" "tab_mult")
 elif [[ "$level" == *"level3"* ]]; then
     qsub=("fprime" "ft_itoa" "ft_split" "rev_wstr" "rostring" "sort_int_tab" "sort_list" "ft_list_remove_if")
 fi
