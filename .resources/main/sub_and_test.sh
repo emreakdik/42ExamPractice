@@ -21,11 +21,13 @@ num=${#qsub[@]}
 while true; do
     cd "../${qsub[$i]}"
     subject=$(cat sub.txt)
-    if [ $i -eq $(($num-1)) ]; then
+    if [ $i -eq $(($num)) ]; then
     clear
-        echo "These questions at $level are completed. You are being directed to the main menu..."
+        echo "These questions at $level are completed."
+        echo "=============================================="
+        read -rp "${GREEN}${BOLD}Please press enter for return to the menu.${RESET}" enterx
         sleep 2
-        cd ../../../main
+        cd ../../main
         bash menu.sh
         exit
     fi
@@ -46,7 +48,9 @@ while true; do
                 break
                 ;;
             menu)
-                cd ../../../main
+                cd ../../../../
+                rm -rf rendu
+                cd .resources/main
                 bash menu.sh
                 exit
                 ;;    
