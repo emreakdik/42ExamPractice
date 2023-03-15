@@ -29,6 +29,10 @@ case $opt in
         rm -rf rendu
         exit 1
         ;;
+    4)
+     cd ../../
+     bash update.sh
+        ;;
     *)
         echo "Invalid choice. Please enter a number from 1 to 3."
         sleep 1

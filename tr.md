@@ -1,4 +1,4 @@
-## Usage Instructions:
+## Kurulum Talimatlari
 
 ilk olarak git clone komutuyla repo'yu istediginiz dizine clonelayin.
 > git clone https://github.com/emreakdik/42ExamPractice
@@ -9,9 +9,8 @@ Daha sonra 42ExamPractice dizinine gidin ve terminalden asagidaki komutu calisti
 Tebrikler shell'e ulastiniz.
 
 
-## User Guide:
+## Kullanici Talimatlari
 
-Kullanim Rehberi
 
 Shell'in kullanimi gayet basit. Secim ekranlarinda hangi sinavi ve hangi leveli pratik yapmak istiyorsaniz onu secmeniz gerekiyor.
 
@@ -24,7 +23,7 @@ Karsiniza sorular ciktiktan sonra yapabileceginiz birden fazla hareket var. Bunl
 
 > Komutlari ana menudeki Commands secenegini secerekte gorebilirsiniz.
 
-## Usage of the "rendu" folder:
+## Kodlarimi nereye yazacagim?
 
 Shell'in kodunuzu dogru sekilde bulabilmesi ve test etmesi icin kodunuzu yazdiginiz konumu sinavdaymis gibi belirlemeniz gerekmektir.
 

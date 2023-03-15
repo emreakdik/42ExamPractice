@@ -53,7 +53,7 @@ while true; do
                 cd .resources/main
                 bash menu.sh
                 exit
-                ;;    
+                ;;
             exit)
                 cd ../../../../
                 rm -rf rendu
