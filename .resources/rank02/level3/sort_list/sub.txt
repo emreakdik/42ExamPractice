@@ -30,3 +30,5 @@ int ascending(int a, int b)
 {
 	return (a <= b);
 }
+
+YOU MUST TEST WITH YOUR LIST.H FILE JUST FOR THIS SHELL.

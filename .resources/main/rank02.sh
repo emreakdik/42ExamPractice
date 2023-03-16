@@ -19,7 +19,6 @@ case $opt in
         bash menu.sh
         ;;
     1)
-        mkdir ../../rendu
         clear
         echo "$(tput setaf 2)$(tput bold)level0 is being prepared $(tput sgr0)"
         display_animation
@@ -53,6 +52,7 @@ case $opt in
     exit)
         cd ../../../../
         rm -rf rendu
+        clear
         exit
         ;;
     *)
