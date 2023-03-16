@@ -14,6 +14,14 @@ This shell aims to provide better practice for exams. By dividing the exam into 
 -   [User Guide](https://chat.openai.com/chat#user-guide)
 -   [Usage Of The "rendu" Folder](https://chat.openai.com/chat#usage-of-the-rendu-folder)
 
+## Introducing
+
+![Use](https://gifyu.com/image/SI2gp)
+
+![test](https://gifyu.com/image/SI2gq)
+
+![trace](https://gifyu.com/image/SI2gd)
+
 ## Install Instructions
 
 1.  Firstly, clone the repo to your desired directory using the `git clone` command:
