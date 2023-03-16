@@ -1,4 +1,5 @@
 
+> !!!don't forget to star the repo to support me :)
 > The shell is still in development. Currently, only Exam Rank 02 is available for use.
 
 
