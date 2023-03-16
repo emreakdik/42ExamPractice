@@ -1,27 +1,27 @@
-
 #include <unistd.h>
 
-int	main(int ac, char **av)
+void	last_word(char *str)
 {
-	int	i;
+	int	j = 0;
+	int i = 0;
 
-	i = 0;
-	if (ac == 2)
+	while (str[i])
 	{
-		while (av[1][i] != '\0')
-			i++;
-		i--;
-		while ((av[1][i] == ' ' || av[1][i] == '\t') && i != 0)
-			i--;	
-		while (av[1][i] != ' ' && av[1][i] != '\t'  && i != 0)
-			i--;
-		if (av[1][i] == ' ' || av[1][i] == '\t')
-			i++;
-		while (av[1][i] != '\0' && av[1][i] != ' ' && av[1][i] != '\t')
-		{	
-			write(1, &av[1][i], 1);
-			i++;
-		}
+		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)
+			j = i + 1;
+		i++;
 	}
+	while (str[j] >= 33 && str[j] <= 127)
+	{
+		write(1, &str[j], 1);
+		j++;
+	}
+}
+
+int		main(int argc, char **argv)
+{
+	if (argc == 2)
+		last_word(argv[1]);
 	write(1, "\n", 1);
+	return (0);
 }
