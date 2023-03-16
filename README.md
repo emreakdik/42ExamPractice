@@ -10,16 +10,20 @@ This shell aims to provide better practice for exams. By dividing the exam into 
 
 ## Table of Contents
 
--   [Install Instructions](https://chat.openai.com/chat#usage-instructions)
--   [User Guide](https://chat.openai.com/chat#user-guide)
--   [Usage Of The "rendu" Folder](https://chat.openai.com/chat#usage-of-the-rendu-folder)
+-   [Introducing](https://github.com/emreakdik/42ExamPractice#introducing)
+-   [Install Instructions](https://github.com/emreakdik/42ExamPractice#install-instructions))
+-   [User Guide]([https://chat.openai.com/chat#user-guide](https://github.com/emreakdik/42ExamPractice#user-guide))
+-   [Usage Of The "rendu" Folder]([https://chat.openai.com/chat#usage-of-the-rendu-folder](https://github.com/emreakdik/42ExamPractice#usage-of-the-rendu-folder))
 
 ## Introducing
 
+- Use
 ![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjk5Y2ZmMjI4YTRmMzdiNjFmODgzMTkyYmMyYjZiZDZjYzQzYjQwNSZjdD1n/ntov5KjibEst89joIt/giphy.gif)
 
+- test
 ![test](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmE0MWY5YzAyNDc1ZTJjMDNiOTFkNDVmOTJjYzQzMTJjMWFlN2QzNyZjdD1n/EOGH6oKsGRAHKibIqk/giphy.gif)
 
+- trace
 ![trace](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk1ZjBkMTdmMDczY2Q1NGU5YTBmNTJlOTU4NTg5NzVjMjI2MzE5MSZjdD1n/4LjdQpPs5xI2Uj9fty/giphy.gif)
 
 ## Install Instructions
