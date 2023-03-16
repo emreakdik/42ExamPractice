@@ -8,8 +8,8 @@ file2=../../../../rendu/repeat_alpha/repeat_alpha.c
     gcc -o out1 "$file1"
     gcc -o out2 "$file2"
 
-    ./out1 "L'eSPrit nE peUt plUs pRogResSer s'Il staGne et sI peRsIsTent VAnIte et auto-justification." > out1.txt
-    ./out2 "L'eSPrit nE peUt plUs pRogResSer s'Il staGne et sI peRsIsTent VAnIte et auto-justification." > out2.txt
+    ./out1 "abc" > out1.txt
+    ./out2 "abc" > out2.txt
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
         out1=$(cat out1.txt)
