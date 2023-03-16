@@ -16,11 +16,11 @@ This shell aims to provide better practice for exams. By dividing the exam into 
 
 ## Introducing
 
-![Use](https://gifyu.com/image/SI2gp)
+![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjk5Y2ZmMjI4YTRmMzdiNjFmODgzMTkyYmMyYjZiZDZjYzQzYjQwNSZjdD1n/ntov5KjibEst89joIt/giphy.gif)
 
-![test](https://gifyu.com/image/SI2gq)
+![test](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmE0MWY5YzAyNDc1ZTJjMDNiOTFkNDVmOTJjYzQzMTJjMWFlN2QzNyZjdD1n/EOGH6oKsGRAHKibIqk/giphy.gif)
 
-![trace](https://gifyu.com/image/SI2gd)
+![trace](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk1ZjBkMTdmMDczY2Q1NGU5YTBmNTJlOTU4NTg5NzVjMjI2MzE5MSZjdD1n/4LjdQpPs5xI2Uj9fty/giphy.gif)
 
 ## Install Instructions
 
