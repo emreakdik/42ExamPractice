@@ -14,9 +14,9 @@ This shell aims to provide better practice for exams. By dividing the exam into 
 ## Table of Contents
 
 -   [Introducing](https://github.com/emreakdik/42ExamPractice#introducing)
--   [Install Instructions](https://github.com/emreakdik/42ExamPractice#install-instructions))
--   [User Guide]([https://chat.openai.com/chat#user-guide](https://github.com/emreakdik/42ExamPractice#user-guide))
--   [Usage Of The "rendu" Folder]([https://chat.openai.com/chat#usage-of-the-rendu-folder](https://github.com/emreakdik/42ExamPractice#usage-of-the-rendu-folder))
+-   [Install Instructions](https://github.com/emreakdik/42ExamPractice#install-instructions)
+-   [User Guide]([https://chat.openai.com/chat#user-guide](https://github.com/emreakdik/42ExamPractice#user-guide)
+-   [Usage Of The "rendu" Folder]([https://chat.openai.com/chat#usage-of-the-rendu-folder](https://github.com/emreakdik/42ExamPractice#usage-of-the-rendu-folder)
 
 ## Introducing
 
