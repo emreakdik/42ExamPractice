@@ -1,47 +1,43 @@
-
-#include <stdio.h>//
-#include <stdlib.h>//
-
-int is_blank(char c)
+char	to_lower(char c)
 {
-	if (c <= 32)
-		return (1);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + ('a' - 'A'));
+	return (c);
 }
 
-int		isvalid(char c, int base)
+int get_digit(char c, int digits_in_base)
 {
-	char digits[17] = "0123456789abcdef";
-	char digits2[17] = "0123456789ABCDEF";
+	int max_digit;
+	if (digits_in_base <= 10)
+		max_digit = digits_in_base + '0';
+	else
+		max_digit = digits_in_base - 10 + 'a';
 
-	while (base--)
-		if (digits[base] == c || digits2[base] == c)
-			return (1);
-	return (0);
-}
-
-int		value_of(char c)
-{
-	if (c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9' && c <= max_digit)
 		return (c - '0');
-	else if (c >= 'a' && c <= 'f')
-		return (c - 'a' + 10);
-	else if (c >= 'A' && c <= 'F')
-		return (c - 'A' + 10);
-	return (0);
+	else if (c >= 'a' && c <= 'f' && c <= max_digit)
+		return (10 + c - 'a');
+	else
+		return (-1);
 }
 
-int		ft_atoi_base(const char *str, int str_base)
+int ft_atoi_base(const char *str, int str_base)
 {
-	int result;
-	int sign;
+	int result = 0;
+	int sign = 1;
+	int digit;
 
-	result = 0;
-	while (is_blank(*str))
-		str++;
-	sign = (*str == '-') ? -1 : 1;
-	(*str == '-' || *str == '+') ? ++str : 0;
-	while (isvalid(*str, str_base))
-		result = result * str_base + value_of(*str++);
-	return (result * sign);
+	if (*str == '-')
+	{
+		sign = -1;
+		++str;
+	}
+
+	while ((digit = get_digit(to_lower(*str), str_base)) >= 0)
+	{
+		result = result * str_base;
+		result = result + (digit * sign);
+		++str;
+	}
+	return (result);
 }
