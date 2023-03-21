@@ -2,46 +2,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	swap_values(t_list *a, t_list *b);
-t_list	*sort_list(t_list *lst, int (*cmp)(int, int));
-
-int ascending(int a, int b)
+int		croissant(int a, int b) // cmp fonksiyonnu
 {
-	return (a <= b);
+	if (a <= b) //1 < 2 = 1
+		return (1);
+	else // 2 > 1 = 0
+		return (0);
 }
 
-int	main(void)
+int main(void)
 {
-	t_list *c = malloc(sizeof(t_list));
-	c->next = 0;
-	c->data = 45;
+	t_list *lst;
+	
+	lst = (t_list*)malloc(sizeof(t_list));
+	lst->data = 20;
+	lst->next = (t_list*)malloc(sizeof(t_list));
+	lst->next->data = 10;
+	lst->next->next = (t_list*)malloc(sizeof(t_list));
+	lst->next->next->data = 0;
+	lst->next->next->next = NULL;
 
-	t_list *b = malloc(sizeof(t_list));
-	b->next = c;
-	b->data = 73;
+	lst = sort_list(lst, croissant);
 
-	t_list *a = malloc(sizeof(t_list));
-	a->next = b;
-	a->data = 108;
-
-	t_list *cur = a;
-	while (cur)
+	while (lst != NULL)
 	{
-		printf("%d", cur->data);
-		if (cur->next != 0)
-			printf(", ");
-		cur = cur->next;
+		printf("%d\n", lst->data);
+	    lst = lst->next;
 	}
-	printf("\n");
 
-	cur = sort_list(a, ascending);
-
-	while (cur)
-	{
-		printf("%d", cur->data);
-		if (cur->next != 0)
-			printf(", ");
-		cur = cur->next;
-	}
-	printf("\n");
+	return (0);
 }
