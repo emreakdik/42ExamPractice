@@ -1,30 +1,21 @@
 #include "list.h"
+#include <stdlib.h>
 
-void	swap_values(t_list *a, t_list *b)
+t_list	*sort_list(t_list *lst, int (*cmp)(int, int))
 {
-	int swap = a->data;
-	a->data = b->data;
-	b->data = swap;
-}
+	int	swap;
+	t_list	*tmp;
 
-t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
-{
-	int swapped = 1;
-	t_list *cur = lst;
-
-	while (swapped == 1)
+	tmp = lst;
+	while(lst->next != NULL)
 	{
-		swapped = 0;
-		while (cur != 0 && cur->next != 0)
+		if (((*cmp)(lst->data, lst->next->data)) == 0)
 		{
-			if (cmp(cur->data, cur->next->data) == 0)
-			{
-				swap_values(cur, cur->next);
-				swapped = 1;
-			}
-			cur = cur->next;
+			swap = lst->data;
+			lst->data = lst->next->data;
+			lst->next->data = swap;
+      			lst = tmp;  
 		}
-		cur = lst;
+        else
+		    lst = lst->next;
 	}
-	return (lst);
-}
