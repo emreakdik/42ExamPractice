@@ -3,10 +3,15 @@
 
 
 > The shell is still in development. Currently, only Exam Rank 02 is available for use.
-
-
-TR: Bu shell sınavlara daha iyi pratik yapmanızı amaçlıyor. Pratiği daha verimli hale getirmek için sınavı level level bölererek istediğiniz levelde peşpeşe sorular çözmenizi sağlar. Aynı zamanda "test" komutu ile birlikte yazdığınız kodu shell sizin için test ediyor.
-
+```
+### Last Updates
+- Timeout was added to solve the infinite loop problem that occurs during compilation.
+- Errors in linked-list questions have been fixed.
+- Improvements were made in tester arguments.
+- A bug that caused compile errors to not be visible was fixed.
+- -Wall -Wextra -Werror flags were added.
+- Confusing script errors that come with compile errors were hidden.
+```
 Turkce Talimatlar: [Baglanti](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
 
 This shell aims to provide better practice for exams. By dividing the exam into levels, it allows you to solve consecutive questions at your desired level to make your practice more efficient. Additionally, by using the "test" command, the shell tests your code for you.
