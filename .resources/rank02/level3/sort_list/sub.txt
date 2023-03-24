@@ -2,7 +2,6 @@ Assignment name  : sort_list
 Expected files   : sort_list.c
 Allowed functions: 
 --------------------------------------------------------------------------------
-
 Write the following functions:
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int));
@@ -12,7 +11,6 @@ pointer cmp to select the order to apply, and returns a pointer to the
 first element of the sorted list.
 
 Duplications must remain.
-
 Inputs will always be consistent.
 
 You must use the type t_list described in the file list.h 
@@ -30,5 +28,12 @@ int ascending(int a, int b)
 {
 	return (a <= b);
 }
+LIST.H FILE:
 
+typedef struct s_list t_list;
+
+struct s_list {
+    int data;
+    t_list *next;
+};
 YOU MUST TEST WITH YOUR LIST.H FILE JUST FOR THIS SHELL.

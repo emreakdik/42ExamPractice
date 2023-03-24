@@ -42,7 +42,21 @@ while true; do
                 ;;
             test)
                 clear
-                bash tester.sh
+                ./tester.sh &
+                pid=$!
+                slept=0
+
+                while [ $slept -lt 10 ] && kill -0 $pid 2>/dev/null; do
+                sleep 1
+                slept=$((slept+1))
+                done
+
+                if kill -0 $pid 2>/dev/null; then
+                echo "$(tput setaf 1)$(tput bold)TIMEOUT$(tput sgr 0)"
+                echo "It can be because of infinite loop ∞"
+                echo "Please check your code or just try again."
+                kill $pid 2>/dev/null
+                fi
                 echo "=============================================="
                 read -rp "${GREEN}${BOLD}Please press enter to continue your practice.${RESET}" enter
                 break

@@ -1,6 +1,5 @@
-#include "list.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "ft_list.h"
+
 
 int		croissant(int a, int b) // cmp fonksiyonnu
 {
