@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     int *tab = malloc(sizeof(int) * (argc - 1));
     
     printf("max( {");
-    for (unsigned int i = 2; i < argc; i++)
+    for (int i = 2; i < argc; i++)
     {
         printf("%s", argv[i]);
         if (i != argc - 1)
