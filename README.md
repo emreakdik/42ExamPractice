@@ -11,6 +11,7 @@
 - A bug that caused compile errors to not be visible was fixed.
 - -Wall -Wextra -Werror flags were added.
 - Confusing script errors that come with compile errors were hidden.
+- Missing subjects added (ft_strrev, ft_strcspn, ft_list_foreach, lcm, print_bits, reverse_bits, wdmatch).
 ```
 Turkce Talimatlar: [Baglanti](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
 
