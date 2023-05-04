@@ -1,6 +1,12 @@
 
+
 > !!!don't forget to star the repo to support me :)
 
+**Compatible Operating Systems:**
+
+-   Mac OS
+-   All Linux Distros
+-   Windows
 
 > The shell is still in development. Currently, only Exam Rank 02 is available for use.
 ```
