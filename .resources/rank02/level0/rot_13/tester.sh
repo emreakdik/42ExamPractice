@@ -9,7 +9,7 @@ file2=../../../../rendu/rot_13/rot_13.c
     gcc -Werror -Wall -Wextra -o out2 "$file2"
 
     ./out1 "abc" > out1.txt 2>/dev/null
-    ./out2 "abc." > out2.txt 2>/dev/null
+    ./out2 "abc" > out2.txt 2>/dev/null
 
     if ! diff -q out1.txt out2.txt >/dev/null ; then
         out1=$(cat out1.txt)
