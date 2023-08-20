@@ -1,6 +1,6 @@
 
 
-> !!!don't forget to star the repo to support me :)
+> !!!don't forget to star the repo
 
 **Compatible Operating Systems:**
 
