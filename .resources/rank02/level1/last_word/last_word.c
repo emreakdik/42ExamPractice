@@ -11,7 +11,7 @@ void	last_word(char *str)
 			j = i + 1;
 		i++;
 	}
-	while (str[j] >= 33 && str[j] <= 127)
+	while (str[j] >= 33 && str[j] <= 126)
 	{
 		write(1, &str[j], 1);
 		j++;
