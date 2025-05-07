@@ -28,9 +28,7 @@ int	main(void)
 			k = i + '0';
 			write(1, &k, 1);
 		}
-		write(1,"\n"
-		
-		, 1);
+		write(1,"\n", 1);
 		i++;
 	}		
 }
