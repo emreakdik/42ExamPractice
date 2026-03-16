@@ -1,4 +1,9 @@
 source colors.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+RENDU_DIR="$REPO_ROOT/rendu"
+
+cd "$SCRIPT_DIR" || exit 1
 
 rank=$1
 level=$2
@@ -27,7 +32,7 @@ while true; do
         echo "=============================================="
         read -rp "${GREEN}${BOLD}Please press enter for return to the menu.${RESET}" enterx
         sleep 2
-        cd ../../main
+        cd "$SCRIPT_DIR" || exit 1
         bash menu.sh
         exit
     fi
@@ -62,15 +67,13 @@ while true; do
                 break
                 ;;
             menu)
-                cd ../../../../
-                rm -rf rendu
-                cd .resources/main
+                rm -rf "$RENDU_DIR"
+                cd "$SCRIPT_DIR" || exit 1
                 bash menu.sh
                 exit
                 ;;
             exit)
-                cd ../../../../
-                rm -rf rendu
+                rm -rf "$RENDU_DIR"
                 exit 1
                 ;;
         esac

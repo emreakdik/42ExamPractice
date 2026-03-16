@@ -1,5 +1,9 @@
 source colors.sh
-mkdir ../../rendu
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+RENDU_DIR="$REPO_ROOT/rendu"
+
+mkdir -p "$RENDU_DIR"
 clear
 bash label.sh
 printf "%-50s\n" "=================================================="
@@ -27,19 +31,17 @@ case $opt in
         bash help.sh
         ;;
     exit)
-        cd ../../../../
-        rm -rf rendu
+        rm -rf "$RENDU_DIR"
         clear
         exit 1
         ;;
     4)
-     cd ../../
-     bash update.sh
+        bash "$REPO_ROOT/update.sh"
         ;;
     5)
-        cd ../../rendu
+        cd "$RENDU_DIR" || exit 1
         open .
-        cd ../.resources/main
+        cd "$SCRIPT_DIR" || exit 1
         bash menu.sh
         exit 1
         ;;

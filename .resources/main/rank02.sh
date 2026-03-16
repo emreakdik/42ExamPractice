@@ -1,6 +1,9 @@
 #!/bin/bash
 source functions.sh
 source colors.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+RENDU_DIR="$REPO_ROOT/rendu"
 clear
 bash label.sh
 printf "%-50s\n" "=================================================="
@@ -26,7 +29,7 @@ case $opt in
         bash sub_and_test.sh rank02 level0
         ;;
     2)  
-        mkdir ../../rendu
+        mkdir -p "$RENDU_DIR"
         clear
         echo "$(tput setaf 2)$(tput bold)level1 is being prepared...$(tput sgr0)"
         display_animation
@@ -34,7 +37,7 @@ case $opt in
         bash sub_and_test.sh rank02 level1
         ;;
     3) 
-        mkdir ../../rendu
+        mkdir -p "$RENDU_DIR"
         clear
         echo "$(tput setaf 2)$(tput bold)level2 is being prepared...$(tput sgr0)"
         display_animation
@@ -42,7 +45,7 @@ case $opt in
         bash sub_and_test.sh rank02 level2
         ;;
     4)
-        mkdir ../../rendu
+        mkdir -p "$RENDU_DIR"
         clear
         echo "$(tput setaf 2)$(tput bold)level3 is being prepared...$(tput sgr0)"
         display_animation
@@ -50,8 +53,7 @@ case $opt in
         bash sub_and_test.sh rank02 level3
         ;;
     exit)
-        cd ../../../../
-        rm -rf rendu
+        rm -rf "$RENDU_DIR"
         clear
         exit
         ;;
