@@ -1,83 +1,98 @@
+# 42 Exam Practice
 
+> Not a giant platform. Not a bloated setup. Just a fast little shell for grinding 42 exams the way we actually do it.
 
-> !!!don't forget to star the repo
+> If this repo helps your grind, leave a star.
 
-**Compatible Operating Systems:**
+42 Exam Practice is a terminal-based practice shell built to make exam prep feel less messy and more repeatable. Instead of jumping between folders, random subjects, and manual test setups, you stay inside one flow: pick a rank, pick a level, solve, test, move on.
 
--   Mac OS
--   All Linux Distros
--   Windows
+The shell is still growing. Right now the active focus is **Exam Rank 02**. **Exam Rank 03** is already planned and still in progress.
 
-> The shell is still in development. Currently, only Exam Rank 02 is available for use.
-```
-### Last Updates
-- Timeout was added to solve the infinite loop problem that occurs during compilation.
-- Errors in linked-list questions have been fixed.
-- Improvements were made in tester arguments.
-- A bug that caused compile errors to not be visible was fixed.
-- -Wall -Wextra -Werror flags were added.
-- Confusing script errors that come with compile errors were hidden.
-- Missing subjects added (ft_strrev, ft_strcspn, ft_list_foreach, lcm, print_bits, reverse_bits, wdmatch).
-```
-Turkce Talimatlar: [Baglanti](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
+Turkish instructions: [tr.md](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
 
-This shell aims to provide better practice for exams. By dividing the exam into levels, it allows you to solve consecutive questions at your desired level to make your practice more efficient. Additionally, by using the "test" command, the shell tests your code for you.
+## Why This Exists
 
-## Table of Contents
+Exam practice gets annoying when the setup steals your energy before the problem even starts.
 
--   [Introducing](https://github.com/emreakdik/42ExamPractice#introducing)
--   [Install Instructions](https://github.com/emreakdik/42ExamPractice#install-instructions)
--   [User Guide](https://github.com/emreakdik/42ExamPractice#user-guide)
--   [Usage Of The "rendu" Folder](https://github.com/emreakdik/42ExamPractice#usage-of-the-rendu-folder)
+This project is here to keep your momentum alive:
 
-## Introducing
+- Practice by level instead of hunting subjects one by one
+- Stay inside a single shell workflow
+- Test your code quickly with the `test` command
+- Work in a `rendu` structure that feels close to the real exam
 
-- Use
+## In Action
+
+### Use
 
 ![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjk5Y2ZmMjI4YTRmMzdiNjFmODgzMTkyYmMyYjZiZDZjYzQzYjQwNSZjdD1n/ntov5KjibEst89joIt/giphy.gif)
 
-- test
+### Test
 
 ![test](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmE0MWY5YzAyNDc1ZTJjMDNiOTFkNDVmOTJjYzQzMTJjMWFlN2QzNyZjdD1n/EOGH6oKsGRAHKibIqk/giphy.gif)
 
-- trace
+### Shell Flow
 
 ![trace](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk1ZjBkMTdmMDczY2Q1NGU5YTBmNTJlOTU4NTg5NzVjMjI2MzE5MSZjdD1n/4LjdQpPs5xI2Uj9fty/giphy.gif)
 
-## Install Instructions
+## Quick Start
 
-1.  Firstly, clone the repo to your desired directory using the `git clone` command:
-    
-    ```bash
-    git clone https://github.com/emreakdik/42ExamPractice
-    ```
-    
-2.  Then, navigate to the 42ExamPractice directory and run the following command in the terminal:
-    
-    ```bash
-    bash exampractice.sh
-    ```
-    
-    Congratulations, you have accessed the shell.
-    
+Clone the repository and launch the shell:
 
-## User Guide
+```bash
+git clone https://github.com/emreakdik/42ExamPractice
+cd 42ExamPractice
+bash exampractice.sh
+```
 
-The usage of the shell is quite simple. In the selection screens, you need to choose which exam and level you want to practice.
+Once it opens, you are inside the practice flow.
 
-After the questions appear, there are several actions you can take, which are:
+## Commands
 
--   After writing the code that the subject requires, you can test your code by typing `test`.
--   You can type `next` to move on to the next subject.
--   You can type `menu` to return to the menu.
--   You can type `exit` to exit the shell.
+After the subject appears, you can use these commands:
 
-You can also view the commands by selecting the "Commands" option in the main menu.
+- `test` to test your code
+- `next` to move to the next subject
+- `menu` to return to the main menu
+- `exit` to close the shell
 
-## Usage Of The "rendu" Folder:
+You can also open the built-in command list from the main menu.
 
-In order for the shell to find and test your code correctly, you need to specify the location where you write your code as if you were in an exam.
+## The `rendu` Folder
 
-When you access the menu, the program will create a "rendu" folder inside the 42ExamPractice folder. Let's say you are trying to solve the "first_word" question.
+The shell looks for your code inside a `rendu` folder, using the same kind of structure you would prepare during the exam.
 
-What you need to do is create a "first_word" folder inside the "rendu" folder and write your code inside the "first_word.c" file.
+If you are solving `first_word`, your file should be placed like this:
+
+```text
+42ExamPractice/
+└── rendu/
+    └── first_word/
+        └── first_word.c
+```
+
+That is the location the shell will use when it runs the tester.
+
+## Platform Notes
+
+- Best experience: macOS and Linux
+- Windows users should prefer WSL or Git Bash
+- The current shell focuses on terminal workflow, and some convenience actions are more comfortable on Unix-like systems
+
+## Recent Updates
+
+- Added a timeout to avoid infinite-loop lockups during compilation and testing
+- Improved tester arguments
+- Made compile errors easier to notice
+- Added `-Wall -Wextra -Werror` checks in the test flow
+- Added missing subjects: `ft_strrev`, `ft_strcspn`, `ft_list_foreach`, `lcm`, `print_bits`, `reverse_bits`, `wdmatch`
+- Cleaned macOS `.DS_Store` artifacts and added a proper `.gitignore`
+- Made `rendu` cleanup path-safe across the shell flow
+- Made launcher and updater scripts work reliably from any current working directory
+- Refreshed the main README with a stronger landing flow while keeping the original project spirit
+
+## Contributing
+
+This is an open-source practice tool built from real use, real friction, and real exam pain.
+
+If you want to improve it, open an issue, send a PR, or help shape the next rank support.
