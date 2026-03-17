@@ -1,5 +1,7 @@
 # 42 Exam Practice
 
+> **New (March 18, 2026):** The menu system was upgraded with arrow-key navigation, numbered options, Enter-to-confirm numeric input, and a redesigned Command Reference.
+
 > Not a giant platform. Not a bloated setup. Just a fast little shell for grinding 42 exams the way we actually do it.
 
 > If this repo helps your grind, leave a star.
