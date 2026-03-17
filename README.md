@@ -25,7 +25,7 @@ This project is here to keep your momentum alive:
 
 ### Use
 
-![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjk5Y2ZmMjI4YTRmMzdiNjFmODgzMTkyYmMyYjZiZDZjYzQzYjQwNSZjdD1n/ntov5KjibEst89joIt/giphy.gif)
+![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXhkZjFoYTJ4bGhnbGI0Z2cxenBrNjFiZTk2dzJkNjJtbHJzMWNoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ARIhoR9vxhkhmJaC1O/giphy.gif)
 
 ### Test
 
