@@ -27,7 +27,7 @@ This project is here to keep your momentum alive:
 
 ### Use
 
-![Use](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXhkZjFoYTJ4bGhnbGI0Z2cxenBrNjFiZTk2dzJkNjJtbHJzMWNoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ARIhoR9vxhkhmJaC1O/giphy.gif)
+![Use](https://media.giphy.com/media/ARIhoR9vxhkhmJaC1O/giphy.gif)
 
 ### Test
 
