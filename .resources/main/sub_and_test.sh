@@ -19,6 +19,7 @@ elif [[ "$level" == *"level3"* ]]; then
 fi
 
 #set -x
+set -o history
 
 i=0
 cd "../$rank/$level/${qsub[$i]}"
@@ -39,7 +40,8 @@ while true; do
     while true; do
         clear
         echo "$subject"
-        read -rp "/>" input
+        read -rep "/>" input
+        history -s "$input"
         case $input in
             previous)
                 if [ $i -gt 0 ]; then
