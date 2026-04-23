@@ -41,6 +41,15 @@ while true; do
         echo "$subject"
         read -rp "/>" input
         case $input in
+            previous)
+                if [ $i -gt 0 ]; then
+                    i=$((i-1))
+                else
+                    echo "$(tput setaf 1)$(tput bold)This is the first question.$(tput sgr0)"
+                    sleep 1
+                fi
+                break
+                ;;
             next)
                 i=$((i+1))
                 break
