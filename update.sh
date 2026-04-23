@@ -18,6 +18,7 @@ if ! command -v git >/dev/null 2>&1; then
 fi
 
 source "$MAIN_DIR/colors.sh"
+cd "$REPO_ROOT" || exit 1
 clear
 
 echo "${GREEN}${BOLD}CLEANING...${RESET}"
