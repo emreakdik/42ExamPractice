@@ -12,6 +12,7 @@ menu_options=(
     "Command Reference"
     "Update Script"
     "Open Rendu Folder"
+    "Exit Without Deleting Rendu"
     "Exit"
 )
 
@@ -41,6 +42,13 @@ case "$selection" in
         exit 1
         ;;
     5)
+        ARCHIVE_NAME="rendu_$(date +%d-%b-%H:%M)"
+        mv "$RENDU_DIR" "$REPO_ROOT/$ARCHIVE_NAME"
+        clear
+        echo "Rendu folder archived as: $ARCHIVE_NAME"
+        exit 1
+        ;;
+    6)
         rm -rf "$RENDU_DIR"
         clear
         exit 1
