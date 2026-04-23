@@ -56,11 +56,12 @@ while true; do
                 ;;
             test)
                 clear
+                TIMEOUT=${EXAM_TIMEOUT_SECONDS:-30}
                 ./tester.sh &
                 pid=$!
                 slept=0
 
-                while [ $slept -lt 10 ] && kill -0 $pid 2>/dev/null; do
+                while [ $slept -lt $TIMEOUT ] && kill -0 $pid 2>/dev/null; do
                 sleep 1
                 slept=$((slept+1))
                 done
