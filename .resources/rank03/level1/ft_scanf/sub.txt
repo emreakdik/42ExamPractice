@@ -1,0 +1,24 @@
+Assignment name  : ft_scanf
+Expected files   : ft_scanf.c
+Allowed functions: fgetc, ungetc, ferror, feof, isspace, isdigit, stdin, va_start, va_arg, va_copy, va_end
+--------------------------------------------------------------------------------
+
+Write a function named `ft_scanf` that will mimic the real scanf with the
+following constraints:
+
+- It will manage only the following conversions: s, d, and c
+- You don't have to handle the options *, m and '
+- You don't have to handle the maximum field width
+- You don't have to handle the types modifier characters (h, hh, l, etc.)
+- You don't have to handle the conversions beginning with %n$
+
+Your function must be declared as follows:
+
+int ft_scanf(const char *, ... );
+
+You will find in this directory a file containing a part of the code you will
+need, you just have to complete it (see ft_scanf_skeleton.c).
+
+To test your program compare your results with the real scanf.
+
+Hint : You may need to read the man of scanf.

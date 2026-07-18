@@ -9,7 +9,7 @@ mkdir -p "$RENDU_DIR"
 
 menu_options=(
     "Exam Rank 02"
-    "Exam Rank 03 (Coming Soon)"
+    "Exam Rank 03"
     "Command Reference"
     "Update Script"
     "Open Rendu Folder"
@@ -25,9 +25,7 @@ case "$selection" in
         bash rank02.sh
         ;;
     1)
-        echo "Exam Rank 03 is coming soon."
-        sleep 2
-        bash menu.sh
+        bash rank03.sh
         ;;
     2)
         bash help.sh

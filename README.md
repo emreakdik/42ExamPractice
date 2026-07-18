@@ -8,7 +8,7 @@
 
 42 Exam Practice is a terminal-based practice shell built to make exam prep feel less messy and more repeatable. Instead of jumping between folders, random subjects, and manual test setups, you stay inside one flow: pick a rank, pick a level, solve, test, move on.
 
-The shell is still growing. Right now the active focus is **Exam Rank 02**. **Exam Rank 03** is already planned and still in progress.
+The shell is still growing. It now covers both **Exam Rank 02** and **Exam Rank 03** (Level 1: `get_next_line`, `ft_scanf`, `filter`; Level 2: `n_queens`, `permutations`, `powerset`, `rip`, `tsp`).
 
 Turkish instructions: [tr.md](https://github.com/emreakdik/42ExamPractice/blob/main/tr.md)
 
@@ -83,6 +83,7 @@ That is the location the shell will use when it runs the tester.
 
 ## Recent Updates
 
+- Added **Exam Rank 03** support (Level 1 + Level 2) with reference solutions and testers; order-independent exercises (`n_queens`, `powerset`, `rip`) are compared with sorted output, and `tsp` is compiled with `-lm`
 - Added a timeout to avoid infinite-loop lockups during compilation and testing
 - Improved tester arguments
 - Made compile errors easier to notice

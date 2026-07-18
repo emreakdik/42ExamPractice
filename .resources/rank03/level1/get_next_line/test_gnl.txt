@@ -1,0 +1,7 @@
+Hello, world!
+This is the second line.
+
+An empty line was above this one.
+Line with no trailing spaces
+	a tab-indented line
+last line without newline

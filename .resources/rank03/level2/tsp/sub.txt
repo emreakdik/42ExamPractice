@@ -1,0 +1,25 @@
+Assignment name  : tsp
+Expected files   : *.c *.h
+Allowed functions: write, sqrtf, getline, fseek, fscanf, ferror, feof, fabsf, memcpy, fprintf, fclose, malloc, calloc, realloc, free, fopen, errno, stderr, stdin, stdout
+--------------------------------------------------------------------------------
+
+Write a program that will read a set of city coordinates in the form
+'%f, %f\n' from the standard input and will print the length of the shortest
+possible path containing all these cities under the form '%.2f'.
+
+Your program will not be tested with more than 11 cities.
+
+You will find in this directory a file tsp_provided.c containing all the boring
+parts of this exercise (file parsing, main). Copy it into your rendu as tsp.c
+and complete the tsp() function. Example input files are also provided.
+
+hint: in order to use sqrtf, add -lm at the end of your compilation command.
+
+For example this should work:
+$> cat square.txt
+1, 1
+0, 1
+1, 0
+0, 0
+$> ./tsp < square.txt | cat -e
+4.00$

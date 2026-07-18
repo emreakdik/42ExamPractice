@@ -9,7 +9,13 @@ cd "$SCRIPT_DIR" || exit 1
 rank=$1
 level=$2
 
-if [[ "$level" == *"level0"* ]]; then
+if [ "$rank" = "rank03" ]; then
+    if [[ "$level" == *"level1"* ]]; then
+        qsub=("get_next_line" "ft_scanf" "filter")
+    elif [[ "$level" == *"level2"* ]]; then
+        qsub=("n_queens" "permutations" "powerset" "rip" "tsp")
+    fi
+elif [[ "$level" == *"level0"* ]]; then
     qsub=("first_word" "fizzbuzz" "ft_putstr" "ft_strcpy" "ft_strlen" "ft_swap" "repeat_alpha" "rev_print" "rot_13" "rotone" "search_and_replace" "ulstr")
 elif [[ "$level" == *"level1"* ]]; then
     qsub=("alpha_mirror" "camel_to_snake" "print_bits" "do_op" "ft_atoi" "ft_strcmp" "reverse_bits" "ft_strrev" "ft_strcspn" "ft_strdup" "inter" "is_power_of_2" "last_word" "max" "snake_to_camel" "swap_bits" "union" "wdmatch")
