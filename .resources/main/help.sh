@@ -16,7 +16,7 @@ show_command_details() {
     printf "${YELLOW}${BOLD}Description:${RESET} %s\n" "$command_description"
     printf "${YELLOW}${BOLD}Usage:${RESET} %s\n" "$command_usage"
     printf "%-50s\n" "=================================================="
-    printf "${GREEN}${BOLD}Press Enter to return to Command Reference.${RESET}"
+    printf '%s%sPress Enter to return to Command Reference.%s' "$GREEN" "$BOLD" "$RESET"
     read -r _
 }
 
@@ -29,6 +29,7 @@ while true; do
         "Back to Main Menu"
     )
 
+    # shellcheck disable=SC2034
     ARROW_MENU_PRIMARY_HINT="Use ↑/↓ to move. Enter to view details or select."
     arrow_menu "COMMAND REFERENCE" "${menu_options[@]}"
     selection="$ARROW_MENU_SELECTED"

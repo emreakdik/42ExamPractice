@@ -1,3 +1,4 @@
+#!/bin/bash
 source colors.sh
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -22,16 +23,16 @@ fi
 set -o history
 
 i=0
-cd "../$rank/$level/${qsub[$i]}"
+cd "../$rank/$level/${qsub[$i]}" || exit 1
 num=${#qsub[@]}
 while true; do
-    cd "../${qsub[$i]}"
+    cd "../${qsub[$i]}" || exit 1
     subject=$(cat sub.txt)
-    if [ $i -eq $(($num)) ]; then
+    if [ "$i" -eq "$num" ]; then
     clear
         echo "These questions at $level are completed."
         echo "=============================================="
-        read -rp "${GREEN}${BOLD}Please press enter for return to the menu.${RESET}" enterx
+        read -rp "${GREEN}${BOLD}Please press enter for return to the menu.${RESET}" _
         sleep 2
         cd "$SCRIPT_DIR" || exit 1
         bash menu.sh
@@ -63,19 +64,19 @@ while true; do
                 pid=$!
                 slept=0
 
-                while [ $slept -lt $TIMEOUT ] && kill -0 $pid 2>/dev/null; do
+                while [ "$slept" -lt "$TIMEOUT" ] && kill -0 "$pid" 2>/dev/null; do
                 sleep 1
                 slept=$((slept+1))
                 done
 
-                if kill -0 $pid 2>/dev/null; then
+                if kill -0 "$pid" 2>/dev/null; then
                 echo "$(tput setaf 1)$(tput bold)TIMEOUT$(tput sgr 0)"
                 echo "It can be because of infinite loop ∞"
                 echo "Please check your code or just try again."
-                kill $pid 2>/dev/null
+                kill "$pid" 2>/dev/null
                 fi
                 echo "=============================================="
-                read -rp "${GREEN}${BOLD}Please press enter to continue your practice.${RESET}" enter
+                read -rp "${GREEN}${BOLD}Please press enter to continue your practice.${RESET}" _
                 break
                 ;;
             menu)

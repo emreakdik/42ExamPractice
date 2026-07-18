@@ -1,3 +1,4 @@
+#!/bin/bash
 clear
 # permission
 find ../rank02/level0 -name "tester.sh" -exec chmod +rwx {} \;

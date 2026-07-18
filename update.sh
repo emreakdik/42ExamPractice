@@ -7,6 +7,7 @@ MAIN_DIR="$REPO_ROOT/.resources/main"
 TMP_DIR="$(mktemp -d)"
 CLONE_DIR="$TMP_DIR/42ExamPractice"
 
+# shellcheck disable=SC2317
 cleanup() {
     rm -rf "$TMP_DIR"
 }

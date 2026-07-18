@@ -14,13 +14,13 @@ display_animation() {
     for i in $(seq 1 $loop_count); do
         for frame in "${frames[@]}"; do
             clear_screen
-            printf "$(tput setaf 2)$(tput bold)Please wait... %s\n\n" "$frame"
-            sleep $duration
-            $(tput sgr0)
+            printf '%s%sPlease wait... %s\n\n' "$(tput setaf 2)" "$(tput bold)" "$frame"
+            sleep "$duration"
+            tput sgr0
         done
-        $(tput sgr0)
+        tput sgr0
     done
-    $(tput sgr0)
+    tput sgr0
 }
 
 arrow_menu() {
@@ -78,7 +78,7 @@ arrow_menu() {
         if [ -n "$typed_number" ]; then
             printf "${CYAN}${BOLD}Number input: %s (press Enter)${RESET}\033[K" "$typed_number"
         else
-            printf "${GREEN}${BOLD}Or type a menu number, then press Enter.${RESET}\033[K"
+            printf '%s%sOr type a menu number, then press Enter.%s\033[K' "$GREEN" "$BOLD" "$RESET"
         fi
     }
 
@@ -156,6 +156,7 @@ arrow_menu() {
                 continue
             fi
 
+            # shellcheck disable=SC2034
             ARROW_MENU_SELECTED="$selected"
             tput cnorm 2>/dev/null || true
             printf "\n"
