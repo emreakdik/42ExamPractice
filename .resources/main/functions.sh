@@ -6,21 +6,26 @@ frames=("◐" "◓" "◑" "◒")
 duration=0.1
 loop_count=3
 
-clear_screen() {
-    printf "\033c"
-}
-
 display_animation() {
-    for i in $(seq 1 $loop_count); do
+    local i frame
+    local green bold reset
+
+    # Resolve color codes once (not per frame) to avoid fork jitter.
+    green=$(tput setaf 2 2>/dev/null)
+    bold=$(tput bold 2>/dev/null)
+    reset=$(tput sgr0 2>/dev/null)
+
+    tput civis 2>/dev/null || true
+    for ((i = 0; i < loop_count; i++)); do
         for frame in "${frames[@]}"; do
-            clear_screen
-            printf '%s%sPlease wait... %s\n\n' "$(tput setaf 2)" "$(tput bold)" "$frame"
+            # Redraw in place with '\r' instead of a full terminal reset,
+            # which is what made the spinner flicker/stutter.
+            printf '\r%s%sPlease wait... %s %s' "$green" "$bold" "$frame" "$reset"
             sleep "$duration"
-            tput sgr0
         done
-        tput sgr0
     done
-    tput sgr0
+    tput cnorm 2>/dev/null || true
+    printf '\r\033[K'
 }
 
 arrow_menu() {
