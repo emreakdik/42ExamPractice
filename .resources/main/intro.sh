@@ -9,7 +9,7 @@ mkdir -p "$RENDU_DIR"
 
 menu_options=(
     "Exam Rank 02"
-    "Exam Rank 03"
+    "Exam Rank 03  (NEW)"
     "Command Reference"
     "Update Script"
     "Open Rendu Folder"

@@ -1,5 +1,7 @@
 # 42 Exam Practice
 
+> **New (July 18, 2026):** **Exam Rank 03 is live!** Level 1 (`get_next_line`, `ft_scanf`, `filter`) and Level 2 (`n_queens`, `permutations`, `powerset`, `rip`, `tsp`) — each with its subject, a reference solution, and a tester. Pick it straight from the main menu.
+>
 > **New (March 18, 2026):** The menu system was upgraded with arrow-key navigation, numbered options, Enter-to-confirm numeric input, and a redesigned Command Reference.
 
 > Not a giant platform. Not a bloated setup. Just a fast little shell for grinding 42 exams the way we actually do it.
