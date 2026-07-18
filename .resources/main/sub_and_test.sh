@@ -60,7 +60,13 @@ while true; do
             test)
                 clear
                 TIMEOUT=${EXAM_TIMEOUT_SECONDS:-30}
-                ./tester.sh &
+                MAX_OUTPUT_LINES=${EXAM_MAX_OUTPUT_LINES:-40}
+                tester_out=$(mktemp)
+                # Run the tester in its own process group (setsid) and capture its
+                # output. A runaway student binary (infinite loop) is then killed
+                # with the whole group instead of being left orphaned, and its
+                # output is bounded before display so it cannot flood the screen.
+                setsid bash tester.sh > "$tester_out" 2>&1 &
                 pid=$!
                 slept=0
 
@@ -70,11 +76,19 @@ while true; do
                 done
 
                 if kill -0 "$pid" 2>/dev/null; then
+                kill -- -"$pid" 2>/dev/null
                 echo "$(tput setaf 1)$(tput bold)TIMEOUT$(tput sgr 0)"
                 echo "It can be because of infinite loop ∞"
                 echo "Please check your code or just try again."
-                kill "$pid" 2>/dev/null
                 fi
+
+                total_lines=$(wc -l < "$tester_out")
+                head -n "$MAX_OUTPUT_LINES" "$tester_out"
+                if [ "$total_lines" -gt "$MAX_OUTPUT_LINES" ]; then
+                echo "${YELLOW}${BOLD}... ($((total_lines - MAX_OUTPUT_LINES)) more lines truncated)${RESET}"
+                fi
+                rm -f "$tester_out"
+
                 echo "=============================================="
                 read -rp "${GREEN}${BOLD}Please press enter to continue your practice.${RESET}" _
                 break
