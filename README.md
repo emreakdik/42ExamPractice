@@ -86,6 +86,7 @@ That is the location the shell will use when it runs the tester.
 ## Recent Updates
 
 - Added **Exam Rank 03** support (Level 1 + Level 2) with reference solutions and testers; order-independent exercises (`n_queens`, `powerset`, `rip`) are compared with sorted output, and `tsp` is compiled with `-lm`
+- Hardened the Rank 03 testers to be closer to the real moulinette: strict `-Wall -Wextra -Werror` compile gate, memory-leak checks via `valgrind` when available (auto-skipped otherwise), and many more edge-case inputs per exercise
 - Added a timeout to avoid infinite-loop lockups during compilation and testing
 - Improved tester arguments
 - Made compile errors easier to notice

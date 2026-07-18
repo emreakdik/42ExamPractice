@@ -143,5 +143,8 @@ int main(int ac, char **av)
 	generate_all_perms(current_index, size, s, all_perms, &perms_row_index);
 	sort_perms(all_perms, total_perms);
 	print_perms(all_perms, total_perms);
+	for (int i = 0; i < total_perms; i++)
+		free(all_perms[i]);
+	free(all_perms);
 	return 0;
 }
