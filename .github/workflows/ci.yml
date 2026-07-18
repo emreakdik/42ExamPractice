@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Lint shell scripts
+        run: |
+          # Fail on warning-level issues or worse across all shell scripts.
+          shellcheck -S warning \
+            exampractice.sh update.sh \
+            .resources/main/*.sh \
+            $(find .resources -name tester.sh)
+
+  test:
+    name: Bats
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Bats
+        run: npm install --global bats
+
+      - name: Install valgrind (for leak_check tests)
+        run: sudo apt-get update && sudo apt-get install -y valgrind
+
+      - name: Run test suite
+        run: bats tests/*.bats
