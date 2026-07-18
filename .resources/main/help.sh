@@ -24,6 +24,7 @@ while true; do
     menu_options=(
         "exit - Quit Exam Practice"
         "next - Move to the next subject"
+        "previous - Move to the previous subject"
         "test - Run the current tester"
         "menu - Main Menu command (in practice)"
         "Back to Main Menu"
@@ -42,12 +43,15 @@ while true; do
             show_command_details "next" "Skips the current question and opens the next one." "next"
             ;;
         2)
-            show_command_details "test" "Runs tester.sh for the current question." "test"
+            show_command_details "previous" "Goes back to the previous question." "previous"
             ;;
         3)
-            show_command_details "menu" "Returns to the main menu and clears rendu files." "menu"
+            show_command_details "test" "Runs tester.sh for the current question." "test"
             ;;
         4)
+            show_command_details "menu" "Returns to the main menu and clears rendu files." "menu"
+            ;;
+        5)
             bash menu.sh
             exit 0
             ;;
