@@ -65,7 +65,7 @@ for d in "$EF"/level*/*/; do
 	[ -f "$src" ] || src=$(ls "$d"*.c | head -1)
 	sed -f "$SABOTAGE" "$src" > "$REPO/rendu/$ex/$(basename "$src")"
 	if diff -q "$src" "$REPO/rendu/$ex/$(basename "$src")" >/dev/null; then
-		printf '  %-18s no "return (0);" to mutate, skipped\n' "$ex"
+		printf '  %-18s no "return (0);" to mutate, see step 3b\n' "$ex"
 		continue
 	fi
 	rm -f "$d"out1 "$d"out2
@@ -77,6 +77,40 @@ for d in "$EF"/level*/*/; do
 		fails=$((fails+1))
 	fi
 done
+
+echo
+echo "=== 3b. sabotage is caught (function-only exercises) ==="
+# ft_ft, write_string and ft_putnbr are functions, not programs: the file the
+# student hands in has no "return (0);" for the generic mutant to hit, so each
+# one gets a mutant aimed at what it actually does.
+mutate() { # <dir> <file> <sed expr> <label>
+	local d="$1" f="$2" expr="$3" label="$4" ex out
+	ex=$(basename "$d")
+	rm -rf "$REPO/rendu/$ex"
+	mkdir -p "$REPO/rendu/$ex"
+	sed "$expr" "$d/$f" > "$REPO/rendu/$ex/$f"
+	if diff -q "$d/$f" "$REPO/rendu/$ex/$f" >/dev/null; then
+		printf '  %-14s %-22s MUTANT DID NOT APPLY\n' "$ex" "$label"
+		fails=$((fails+1))
+		return
+	fi
+	rm -f "$d"/out1 "$d"/out2
+	out=$(cd "$d" && timeout 60 bash tester.sh 2>&1)
+	if echo "$out" | grep -qE 'FAIL|does not compile|Cannot execute'; then
+		printf '  %-14s %-22s caught\n' "$ex" "$label"
+	else
+		printf '  %-14s %-22s MISSED\n' "$ex" "$label"
+		fails=$((fails+1))
+	fi
+}
+
+mutate "$EF/level1/ft_ft" ft_ft.c 's/42/41/' "sets 41 not 42"
+mutate "$EF/level1/write_string" write_string.c \
+	's/write(1, str, i)/write(1, str, i - 1)/' "drops last char"
+mutate "$EF/level1/write_string" write_string.c 's/if (!str)/if (0)/' "no NULL guard"
+mutate "$EF/level2/ft_putnbr" ft_putnbr.c 's/nb % 10/nb % 9/' "wrong base digit"
+mutate "$EF/level2/ft_putnbr" ft_putnbr.c 's/if (nb >= 10)/if (nb >= 100)/' "drops a digit"
+mutate "$EF/level2/ft_putnbr" ft_putnbr.c 's/write(1, "-", 1);/;/' "loses minus sign"
 
 if command -v norminette >/dev/null 2>&1; then
 	echo
