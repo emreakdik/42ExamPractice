@@ -1,0 +1,25 @@
+Assignment name  : title
+Expected files   : title.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays it in title case: the first
+alphabetic character of every word is uppercase and the rest of the word is
+lowercase. Every other character is left untouched, spacing included.
+
+A word is a sequence of characters separated by spaces or tabs.
+
+The output is followed by a newline.
+
+If the number of arguments is not 1, the program displays only a newline.
+
+Examples:
+
+$> ./title "hello world" | cat -e
+Hello World$
+$> ./title "  MULTIPLE   spaces  HERE " | cat -e
+  Multiple   Spaces  Here $
+$> ./title "42 porto" | cat -e
+42 Porto$
+$> ./title | cat -e
+$

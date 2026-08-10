@@ -1,0 +1,15 @@
+Assignment name  : ft_putnbr
+Expected files   : ft_putnbr.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a function that displays an integer on the standard output, without a
+trailing newline.
+
+Your function must be declared as follows:
+
+void	ft_putnbr(int nb);
+
+The whole range of int must be handled, including -2147483648.
+
+Example: ft_putnbr(-42) displays -42

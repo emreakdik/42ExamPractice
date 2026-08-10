@@ -9,7 +9,15 @@ cd "$SCRIPT_DIR" || exit 1
 rank=$1
 level=$2
 
-if [ "$rank" = "rank03" ]; then
+if [ "$rank" = "examfinal" ]; then
+    if [[ "$level" == *"level1"* ]]; then
+        qsub=("aff_a" "aff_first_param" "aff_last_param" "even" "odd" "write_string" "ft_ft" "interval_spaces" "print_odd" "print_even" "print_interval" "occ_a" "occ_z" "count_alen")
+    elif [[ "$level" == *"level2"* ]]; then
+        qsub=("buzzfizz" "ft_putnbr" "is_palindrome" "swap_cases" "title" "count_words")
+    elif [[ "$level" == *"level3"* ]]; then
+        qsub=("count_alpha" "str_maxlenoc" "ord_alphlong" "count_island")
+    fi
+elif [ "$rank" = "rank03" ]; then
     if [[ "$level" == *"level1"* ]]; then
         qsub=("get_next_line" "ft_scanf" "filter")
     elif [[ "$level" == *"level2"* ]]; then

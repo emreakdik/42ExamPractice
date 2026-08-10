@@ -1,0 +1,25 @@
+Assignment name  : print_interval
+Expected files   : print_interval.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes two integers a and b and displays every number
+between them, one per line.
+
+The interval includes a and b. If a is greater than b, the numbers are
+displayed in descending order.
+
+If the number of arguments is not 2, the program displays nothing.
+
+Examples:
+
+$> ./print_interval 3 6 | cat -e
+3$
+4$
+5$
+6$
+$> ./print_interval 1 -1 | cat -e
+1$
+0$
+-1$
+$> ./print_interval | cat -e

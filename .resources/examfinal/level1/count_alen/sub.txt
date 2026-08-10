@@ -1,0 +1,22 @@
+Assignment name  : count_alen
+Expected files   : count_alen.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays how many alphabetic
+characters it contains, followed by a newline.
+
+An alphabetic character is a letter between 'a' and 'z' or between 'A' and
+'Z'. Every other character is ignored.
+
+If the number of arguments is not 1, the program displays 0 followed by a
+newline.
+
+Examples:
+
+$> ./count_alen "42 Porto!" | cat -e
+5$
+$> ./count_alen "1234" | cat -e
+0$
+$> ./count_alen | cat -e
+0$

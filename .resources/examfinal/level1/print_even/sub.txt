@@ -1,0 +1,21 @@
+Assignment name  : print_even
+Expected files   : print_even.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes one integer n and displays every even number from
+0 up to n included, one per line.
+
+If n is negative, or if the number of arguments is not 1, the program
+displays nothing.
+
+Examples:
+
+$> ./print_even 7 | cat -e
+0$
+2$
+4$
+6$
+$> ./print_even 0 | cat -e
+0$
+$> ./print_even -4 | cat -e

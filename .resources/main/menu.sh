@@ -7,6 +7,9 @@ find ../rank02/level2 -name "tester.sh" -exec chmod +rwx {} \;
 find ../rank02/level3 -name "tester.sh" -exec chmod +rwx {} \;
 find ../rank03/level1 -name "tester.sh" -exec chmod +rwx {} \;
 find ../rank03/level2 -name "tester.sh" -exec chmod +rwx {} \;
+find ../examfinal/level1 -name "tester.sh" -exec chmod +rwx {} \;
+find ../examfinal/level2 -name "tester.sh" -exec chmod +rwx {} \;
+find ../examfinal/level3 -name "tester.sh" -exec chmod +rwx {} \;
 
 bash label.sh
 bash intro.sh

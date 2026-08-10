@@ -1,1 +1,8 @@
 *.sh text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.txt text eol=lf
+
+# The count_island maps are extension-less and their line width is part of the
+# exercise: a CRLF checkout would change every column count.
+.resources/examfinal/level3/count_island/* text eol=lf

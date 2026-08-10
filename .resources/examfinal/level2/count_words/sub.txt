@@ -1,0 +1,24 @@
+Assignment name  : count_words
+Expected files   : count_words.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays the number of words it
+contains, followed by a newline.
+
+A word is a sequence of characters separated by spaces or tabs. Leading,
+trailing and repeated separators do not count as words.
+
+If the number of arguments is not 1, the program displays 0 followed by a
+newline.
+
+Examples:
+
+$> ./count_words "hello world" | cat -e
+2$
+$> ./count_words "   lots   of   spaces   " | cat -e
+3$
+$> ./count_words "" | cat -e
+0$
+$> ./count_words | cat -e
+0$

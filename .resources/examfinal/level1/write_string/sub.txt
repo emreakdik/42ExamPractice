@@ -1,0 +1,15 @@
+Assignment name  : write_string
+Expected files   : write_string.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a function that displays a string on the standard output, without a
+trailing newline.
+
+Your function must be declared as follows:
+
+void	write_string(char *str);
+
+A NULL pointer displays nothing.
+
+Example: write_string("42") displays 42

@@ -1,0 +1,21 @@
+Assignment name  : occ_a
+Expected files   : occ_a.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays how many times the character
+'a' appears in it, followed by a newline.
+
+The count is case sensitive: 'A' does not count.
+
+If the number of arguments is not 1, the program displays 0 followed by a
+newline.
+
+Examples:
+
+$> ./occ_a "banana" | cat -e
+3$
+$> ./occ_a "BANANA" | cat -e
+0$
+$> ./occ_a | cat -e
+0$
