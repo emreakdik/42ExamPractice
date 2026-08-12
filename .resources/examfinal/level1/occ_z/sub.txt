@@ -1,0 +1,21 @@
+Assignment name  : occ_z
+Expected files   : occ_z.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays how many times the character
+'z' appears in it, followed by a newline.
+
+The count is case sensitive: 'Z' does not count.
+
+If the number of arguments is not 1, the program displays 0 followed by a
+newline.
+
+Examples:
+
+$> ./occ_z "pizza" | cat -e
+2$
+$> ./occ_z "PIZZA" | cat -e
+0$
+$> ./occ_z | cat -e
+0$

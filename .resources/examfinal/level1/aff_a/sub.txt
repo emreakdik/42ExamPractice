@@ -1,0 +1,21 @@
+Assignment name  : aff_a
+Expected files   : aff_a.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays the first 'a' character it
+contains, followed by a newline.
+
+If there is no 'a' character in the string, or if the number of arguments is
+not 1, the program displays only a newline.
+
+Examples:
+
+$> ./aff_a "abc" | cat -e
+a$
+$> ./aff_a "zzz" | cat -e
+$
+$> ./aff_a | cat -e
+$
+$> ./aff_a "one" "two" | cat -e
+$

@@ -1,0 +1,23 @@
+Assignment name  : is_palindrome
+Expected files   : is_palindrome.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays 1 if it is a palindrome, or
+0 if it is not, followed by a newline.
+
+A palindrome reads the same forwards and backwards. The comparison is done on
+the string exactly as given: every character counts, and the case matters.
+
+If the number of arguments is not 1, the program displays only a newline.
+
+Examples:
+
+$> ./is_palindrome "radar" | cat -e
+1$
+$> ./is_palindrome "Radar" | cat -e
+0$
+$> ./is_palindrome "" | cat -e
+1$
+$> ./is_palindrome | cat -e
+$

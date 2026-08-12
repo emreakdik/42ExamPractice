@@ -1,0 +1,15 @@
+Assignment name  : aff_first_param
+Expected files   : aff_first_param.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that displays its first argument, followed by a newline.
+
+If the program is called without arguments, it displays only a newline.
+
+Examples:
+
+$> ./aff_first_param "hello" "world" | cat -e
+hello$
+$> ./aff_first_param | cat -e
+$

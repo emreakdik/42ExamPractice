@@ -1,0 +1,11 @@
+Assignment name  : ft_ft
+Expected files   : ft_ft.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that takes a pointer to int as parameter and sets the value
+pointed to to 42.
+
+Your function must be declared as follows:
+
+void	ft_ft(int *nbr);

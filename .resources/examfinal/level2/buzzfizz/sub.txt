@@ -1,0 +1,22 @@
+Assignment name  : buzzfizz
+Expected files   : buzzfizz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that displays the numbers from 1 to 100, one per line.
+
+If the number is a multiple of 3, display "buzz" instead of the number.
+If the number is a multiple of 5, display "fizz" instead of the number.
+If the number is a multiple of both 3 and 5, display "buzzfizz" instead.
+
+Examples:
+
+$> ./buzzfizz | head -6 | cat -e
+1$
+2$
+buzz$
+4$
+fizz$
+buzz$
+$> ./buzzfizz | sed -n '15p' | cat -e
+buzzfizz$

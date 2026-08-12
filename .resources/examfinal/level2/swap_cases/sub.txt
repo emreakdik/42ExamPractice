@@ -1,0 +1,21 @@
+Assignment name  : swap_cases
+Expected files   : swap_cases.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays it with the case of every
+alphabetic character swapped: lowercase letters become uppercase and uppercase
+letters become lowercase. Every other character is left untouched.
+
+The output is followed by a newline.
+
+If the number of arguments is not 1, the program displays only a newline.
+
+Examples:
+
+$> ./swap_cases "Hello World" | cat -e
+hELLO wORLD$
+$> ./swap_cases "42 Porto!" | cat -e
+42 pORTO!$
+$> ./swap_cases | cat -e
+$

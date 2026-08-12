@@ -1,0 +1,18 @@
+Assignment name  : odd
+Expected files   : odd.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes any number of integers as arguments and displays
+the odd ones, one per line, in the order they were given.
+
+If the program is called without arguments, it displays nothing.
+
+Examples:
+
+$> ./odd 1 2 3 4 | cat -e
+1$
+3$
+$> ./odd -7 -4 0 | cat -e
+-7$
+$> ./odd | cat -e

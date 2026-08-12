@@ -9,7 +9,8 @@ mkdir -p "$RENDU_DIR"
 
 menu_options=(
     "Exam Rank 02"
-    "Exam Rank 03  (NEW)"
+    "Exam Rank 03"
+    "Exam Final  (NEW)"
     "Command Reference"
     "Update Script"
     "Open Rendu Folder"
@@ -28,26 +29,29 @@ case "$selection" in
         bash rank03.sh
         ;;
     2)
-        bash help.sh
+        bash examfinal.sh
         ;;
     3)
-        bash "$REPO_ROOT/update.sh"
+        bash help.sh
         ;;
     4)
+        bash "$REPO_ROOT/update.sh"
+        ;;
+    5)
         cd "$RENDU_DIR" || exit 1
         open .
         cd "$SCRIPT_DIR" || exit 1
         bash menu.sh
         exit 1
         ;;
-    5)
+    6)
         ARCHIVE_NAME="rendu_$(date +%d-%b-%H:%M)"
         mv "$RENDU_DIR" "$REPO_ROOT/$ARCHIVE_NAME"
         clear
         echo "Rendu folder archived as: $ARCHIVE_NAME"
         exit 1
         ;;
-    6)
+    7)
         rm -rf "$RENDU_DIR"
         clear
         exit 1
